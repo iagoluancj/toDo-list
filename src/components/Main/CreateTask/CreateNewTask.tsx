@@ -9,7 +9,8 @@ export function CreateNewTask() {
 
     const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
         if (e.key === 'Enter') {
-            addTasks({ id: 2, content: newTask });
+            const newTaskId = Number(generateNumericId()); // Gere uma chave única
+            addTasks({ id: newTaskId, content: newTask});
             setNewTask(''); 
          }
       }

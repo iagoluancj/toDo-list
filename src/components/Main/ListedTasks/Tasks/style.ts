@@ -32,14 +32,6 @@ export const TaskImgTrash = styled.img`
         cursor: pointer;
     }
 `
-export const TaskInputCheck = styled.input`
-        
-    &:checked {
-      background-color: green;
-      color: green;
-      border-color: green;
-    }
-`
 export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   position: absolute;
   opacity: 0;
@@ -60,4 +52,6 @@ export const TaskSpan = styled.div<{ checked: boolean}>`
     border: 1px solid transparent;
     text-decoration: ${props => props.checked ? 'line-through' : 'none' };
     opacity: ${props => props.checked ? '0.5' : '1' };;
+    white-space: normal; // ou omita esta linha, pois o valor padrão é 'normal'
+    overflow-wrap: break-word;
 `

@@ -3,7 +3,7 @@ import { createContext, useState, useContext } from "react";
 type Task = {
     id: number;
     content: string;
-    completed?: boolean; 
+    completed: boolean; 
 }
 
 type TaskProviderProps = {

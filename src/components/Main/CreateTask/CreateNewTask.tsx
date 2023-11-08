@@ -10,7 +10,7 @@ export function CreateNewTask() {
     const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
         if (e.key === 'Enter') {
             const newTaskId = Number(generateNumericId()); // Gere uma chave única
-            addTasks({ id: newTaskId, content: newTask});
+            addTasks({ id: newTaskId, content: newTask, completed: false});
             setNewTask(''); 
          }
       }
@@ -26,7 +26,7 @@ export function CreateNewTask() {
                 onChange={(e) => setNewTask(e.target.value)}
                 placeholder="Adicionar nova tarefa">
             </AddNewTask>
-            <ButtonCreateNewTask onClick={() => addTasks({id: Number(generateNumericId()), content: newTask})}>
+            <ButtonCreateNewTask onClick={() => addTasks({id: Number(generateNumericId()), content: newTask, completed: false})}>
                 Criar
                 <img src={addTask} alt="" />
             </ButtonCreateNewTask>

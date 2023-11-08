@@ -14,6 +14,13 @@ export const TasksCreatedAndCompleted = styled.div`
     align-self: stretch;
 
     padding: 2rem 10rem;
+    
+    @media (max-width: 777px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0rem;
+    }
 `;
 
 export const OrganizationSpan = styled.div`

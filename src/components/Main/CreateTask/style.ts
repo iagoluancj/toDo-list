@@ -52,4 +52,8 @@ export const ButtonCreateNewTask = styled.button`
         transition: .1s;
         cursor: pointer;
     }
+
+    @media (max-width: 777px) {
+        padding: 0 8px;
+    }
 `;

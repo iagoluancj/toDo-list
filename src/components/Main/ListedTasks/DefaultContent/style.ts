@@ -7,10 +7,12 @@ export const DefaultListTasks = styled.div`
     align-items: center;
     gap: 16px;
     align-self: stretch;
+    text-align: center;
     
     padding: 64px 24px;
-    width: 70%;
+    width: 100%;
 
     border-radius: 8px;
     border-top: 1px solid ${props => props.theme['grey-400']};
+    
 `
